@@ -3,12 +3,9 @@
 % LaTeX Template
 % Version 1.0 (14/7/16)
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
 % Original author:
 % Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
-% Vel (vel@LaTeXTemplates.com)
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
 %
 % License:
 % The MIT License (see included LICENSE file)
@@ -20,21 +17,47 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+% Command for printing skill overview bubbles
+\newcommand\skills{ 
+~
+	\smartdiagram[bubble diagram]{
+        \textbf{Data}\\\textbf{Engineering},
+        \textbf{Full Stack}\\\textbf{Web Dev},
+        \textbf{~~~~~OOP~~~~~~},
+        \textbf{Mobile}\\\textbf{Dev},
+        \textbf{Machine}\\\textbf{Learning},
+        \textbf{Test}\\\textbf{~~Automation~~},
+        \textbf{Statistical}\\\textbf{Analysis}
+    }
+}
+
+% Programming skill bars
+\programming{{C $\textbullet$ C++  $\textbullet$ R / 3}, {Java $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5}, {HTML5 $\textbullet$ JS $\textbullet$ Python / 5}}
+
+% Projects text
+\projects{
+\textbf{DecAR} - An augmented reality interior decoration app for Android \\
+        \textbf{CIS*6320} - An implementation of the Bicubic interpolation algorithm in C++
+        \textbf{CIS*6650} - A comparative statistical study of SVM kernels, and number of hidden layers in ANN, on 5 UCI datasets
+        \textbf{CIS*6660} - A data linkage project to integrate Canada's WWI casualties and 1901 Canadian census using an SVM
+        \textbf{CIS*6650} - A statistical study of spurious correlations, such as correlating beer production with election outcome
+}
+
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
-
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
+\cvname{ERIK MEDINA} % Your name
+\cvjobtitle{ Android Developer } % Job
+% title/career
 
-
-\cvname{Erik Medina} % Your name
-\cvjobtitle{Android Developer} % Job title/career
-
-\cvlinkedin{https://es.linkedin.com/in/erikmedinachanca}
-\cvnumberphone{+34 682 40 77 31} % Phone number
-\cvsite{http://uoguelph.ca/\textasciitilde hgadgil} % Personal website
-\cvmail{harsh.gadgil@gmail.com} % Email address
+\cvlinkedin{/in/erikmedinachanca}
+\cvgithub{ErikMedina}
+\cvnumberphone{(+34) 682 40 77 31} % Phone number
+\cvmail{erik.medina.chanca@gmail.com} % Email address
+\cvsite{}
 
 %----------------------------------------------------------------------------------------
 
@@ -49,36 +72,42 @@
 
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
-    	{2015 - 2016 \\ (Expected)}
-        {MSc., Computer Science}
-        {\href{http://www.uoguelph.ca/}{University of Guelph}}
-        {Guelph, Ontario, Canada}
-        {Current GPA: 3.7/4, 83\% \\ \textit{Specialization: Data Mining}}
+    	{2015 - 2017}
+        {}
+        {MSc., Computer Science \textnormal{(GPA: 3.7/4.0)}}
+        {\href{http://www.uoguelph.ca/}{University of Guelph, Canada}}
+        {}
+        {}
 	\twentyitem
     	{2009 - 2013}
-        {BEng., Computer Engineering}
-        {\href{http://www.unipune.ac.in/}{University of Pune}}
-        {Pune, Maharashtra, India}
-        {First Class with Distinction}
+		{}
+        {BEng., Computer Engineering \textnormal{(GPA: 4.0/4.0)}}
+        {\href{http://www.unipune.ac.in/}{University of Pune, India}}
+        {}
+        {}
 	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
 \end{twenty}
-
 
 \section{Research}
 \begin{twenty}
 	\twentyitem
-    	{2015 - 2016}
-        {Graduate Research Assistant}
+    	{2015 - 2017}
+		{}
+        {MSc. Candidate, Graduate Research Assistant}
         {\href{http://www.uoguelph.ca/}{University of Guelph}}
         {}
         {
+       	\textbf{Thesis}: Data Integration from Multiple Historical Sources to Study Canadian Casualties of WWI
         {\begin{itemize}
-        \item Worked on integrating large, noisy datasets containing upto six million records for predictive modeling and regression analyses
-        \item Performed classification using Support Vector Machines and multivariate regression analyses using Logistic Regression
-        \item A paper describing the integration methodology and preliminary results is accepted for publication at the DINA workshop in IEEE International Conference of Data Mining 2016 in Barcelona, Spain
-    \end{itemize}}
+        \item Proposed a scalable stepwise deterministic method to reliably integrate datasets without labeled data. The method performs comparably with a method that incorporates a Support Vector Machine
+        \item Constructed a rich longitudinal dataset to enable comphrehensive time-series analyses about WWI Canadian society and military
+        \item \textbf{Tools}: R, Python, scikit-learn, BeautifulSoup, pandas, matplotlib \vspace{2mm}
+		\end{itemize}}
         }
 \end{twenty}
+
+\section{Publications}
+L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016. \vspace{2mm}
 
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
@@ -87,22 +116,33 @@
 \section{Experience}
 
 \begin{twenty} % Environment for a list with descriptions
+\twentyitem
+    	{April 2017 -}
+		{Present}
+        {Data Engineer}
+        {\href{http://www.bell.ca/}{Bell}}
+        {}
+        {\begin{itemize}
+        \item Currently involved in building a realtime data ingestion pipeline on a Kafka cluster using Spark Streaming, to detect SMS spammers on Bell's network in realtime
+        \end{itemize}}
+        \\
 	\twentyitem
-    	{Sep 2015 - \\May 2016}
-        {Co-Founder \& Full Stack Developer}
+    	{Sep 2015 -}
+		{May 2016}
+        {Co-founder \& Full Stack Developer}
         {\href{http://www.localxchange.ca/}{LocalXChange Inc.}}
         {}
         {
         {\begin{itemize}
-        \item In a team of two, won \$8,000 in funding from The Hub incubator (CBaSE, University of Guelph) to kick start a startup venture
-        \item In a team of three, built a prototype hyperlocal platform with support from the University of Guelph. The goal was to deliver hyperlocal news and events and other content from community organizations to local users
-        \item Built hybrid mobile and web apps using Node.js, Meteor, Ionic and AngularJS. Performed automated testing using Selenium. Designed and built production quality NoSQL databases
-        \item Met with city officials, including the Mayor, and university executives to discuss social \& business aspects of the platform 
+        \item In a team of 2, raised \$8,000 in funding from The Hub incubator at the University of Guelph, to develop a prototype hyperlocal content platform, aimed at delivering local news and events from community organizations to local users in realtime (i.e., hyperlocal)
+        \item In a team of 3, built hybrid mobile \& web apps with Ionic, Angular.js and MongoDB, surpassing 1,000 users within a month since launch
+        \item Met with city officials, including the Mayor of Guelph, and university officials to discuss marketing \& business strategies for the platform 
     \end{itemize}}
         }
-        
+    \\   
     \twentyitem
-   		{Sept 2015 - \\ Present}
+   		{Sep 2015 -}
+		{Dec 2016}
         {Graduate Teaching Assistant}
         {\href{http://www.uoguelph.ca}{University of Guelph}}
         {}
@@ -111,17 +151,19 @@
         \item TA for CIS*2430 (OOP), CIS*4150 (Software Reliability \& Testing) and CIS*3530 (Database Systems \& Concepts) courses
     \end{itemize}}
         }
-        
+     \\
      \twentyitem
-   		{Dec 2013 - \\ Apr 2015}
+   		{Dec 2013 -}
+		{Apr 2015}
         {Test Automation Engineer}
         {\href{http://www.synechron.com/}{Synechron}}
         {}
         {
         \begin{itemize}
-        \item Developed a \textit{Keyword Driven} and \textit{Behavior Driven} test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/crm.aspx}{Microsoft Dynamics CRM}. Wrote an efficient recursive function to search within multi-level nested frames, reducing development time. Automated existing manual test cases. Won SPOT award and appreciation from client{\includegraphics[scale=0.05]{img/trophy.png}}
-        \item Involved in development of a Coded UI test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/erp-ax-overview.aspx}{Microsoft Dynamics AX} in C\#
-        \item Involved in manual testing for \href{http://www.fico.com/en/products/fico-blaze-advisor-decision-rules-management-system}{FICO Blaze Advisor}. Participated in standup meetings and Three Amigos sessions with onshore/offshore developers and BAs. Responsible for sending daily status reports and testing user stories. Used JIRA and Quality Center for defect reporting, and Quick Test Professional for executing automated test cases
+        \item Developed a \textit{Keyword Driven} and \textit{Behavior Driven} test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/crm.aspx}{Microsoft Dynamics CRM}. Wrote an efficient recursive function to search multi-level frames, reducing development time by approximately two weeks. Won SPOT award {\includegraphics[scale=0.05]{img/trophy.png}}
+        
+        \textit{My work opened up a new position in the organization, enabling it to earn additional revenue of \$3,500 per month (estimated)}
+        \item Demonstrated by proof of concept that rewriting a test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/erp-ax-overview.aspx}{Microsoft Dynamics AX}, using an open source library (White) instead of a proprietary one (Coded UI), would enable the team to save \$4,000 annually by downgrading the prevailing edition of Microsoft Visual Studio from \textit{Premium} to \textit{Professional}
     \end{itemize}
     	}
         
