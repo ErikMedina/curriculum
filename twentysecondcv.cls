@@ -124,6 +124,9 @@
 %  SIDEBAR DEFINITIONS
 %----------------------------------------------------------------------------------------
 
+% Variables
+\newcommand\languagesRows{3}
+
 \setlength{\TPHorizModule}{1cm} % Left margin
 \setlength{\TPVertModule}{1cm} % Top margin
 
@@ -167,7 +170,7 @@
 \newcommand\languages[1]{ 
   \renewcommand{\languages}{
     \begin{tikzpicture}
-          \node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+          \node [above right] at (0, \languagesRows) {$A2 \: \arrow{2.1} \: B2 \:\arrow{2.1} \: C2$};
       \foreach [count=\i] \x/\y in {#1}{
         \draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
         \draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
