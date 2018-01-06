@@ -186,6 +186,12 @@
   }
 }
 
+\newcommand\attachments[1]{ 
+  \renewcommand{\attachments}{
+    {#1}
+  }
+}
+
 %----------------------------------------------------------------------------------------
 %  SIDEBAR LAYOUT
 %----------------------------------------------------------------------------------------
@@ -272,9 +278,9 @@
      \languages
          
         \vspace{4mm}
-        \profilesection{Projects}{3cm} 
+        \profilesection{Attachments}{1.7cm} 
         
-        \projects
+        \attachments
       
   \end{textblock}
 }
