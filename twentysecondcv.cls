@@ -65,7 +65,7 @@
 \definecolor{sidecolor}{HTML}{E7E7E7}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{maingray}{HTML}{B9B9B9}
-
+\definecolor{yellow}{RGB}{252,250,34}
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{999999}
@@ -369,11 +369,11 @@
     % specifies which is the distance among the bubble center node and the other bubbles
     distance center/other bubbles = 0.3cm,
     % sets the distance from the text to the border of the bubble center node
-    distance text center bubble = 0.5cm,
+    distance text center bubble = 0.8cm,
     % set center bubble color
     bubble center node color = green_android,
     % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, green, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    set color list = {lightgray, materialcyan, orange, yellow, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
     % sets the opacity at which the bubbles are shown
     bubble fill opacity = 0.6,
     % sets the opacity at which the bubble text is shown
