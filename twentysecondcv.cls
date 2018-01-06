@@ -163,6 +163,20 @@
     \end{tikzpicture}
   }
 }
+
+\newcommand\languages[1]{ 
+  \renewcommand{\languages}{
+    \begin{tikzpicture}
+          \node [above right] at (0, 4) {$0 \: LOC \: \arrow{3.2} \: 5000 \: LOC$};
+      \foreach [count=\i] \x/\y in {#1}{
+        \draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
+        \draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+        \node [above right] at (0,\i+0.35) {\x};
+      }
+    \end{tikzpicture}
+  }
+}
+
 \newcommand\projects[1]{ 
   \renewcommand{\projects}{
     {#1}
@@ -242,7 +256,7 @@
     \vspace{4mm}
     \profilesection{Skills}{4cm}
     
-    {\large \textbf{Overview}}
+    {\large \textbf{Technologies}}
 
   \skills
         
@@ -250,9 +264,9 @@
         
         \vspace{3mm}
        
-   {\large \textbf{Programming}} 
+   {\large \textbf{Languages}} 
 
-     \programming
+     \languages
          
         \vspace{4mm}
         \profilesection{Projects}{3cm} 
@@ -369,7 +383,7 @@
     % specifies which is the distance among the bubble center node and the other bubbles
     distance center/other bubbles = 0.3cm,
     % sets the distance from the text to the border of the bubble center node
-    distance text center bubble = 0.8cm,
+    distance text center bubble = 1.0cm,
     % set center bubble color
     bubble center node color = green_android,
     % define the list of colors usable in the diagram
