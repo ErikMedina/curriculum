@@ -220,7 +220,7 @@
     
     \vspace{4mm}
     \renewcommand{\arraystretch}{2}
-    \begin{tabular}{p{0.7cm} @{\hskip 0.5cm}p{5cm}}
+    \begin{tabular}{p{0.7cm} @{\hskip 0.5cm}p{6cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
           {$
               \begin{array}{l}
