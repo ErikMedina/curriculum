@@ -224,7 +224,7 @@
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
           {$
               \begin{array}{l}
-              \hspace{2mm} \Huge \textnormal{\faMobile}
+              \hspace{1.5mm} \Huge \textnormal{\faMobile}
               \end{array}
               $} 
             & \cvnumberphone\\}
@@ -232,7 +232,7 @@
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{0.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+              \hspace{0mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail} \\}
@@ -240,14 +240,14 @@
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{1mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+              \hspace{0mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{1mm} \huge \textnormal{\faGithub}
+              \hspace{0mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
