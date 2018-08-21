@@ -142,6 +142,7 @@
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
+\newcommand{\UKnumberphone}[1]{\renewcommand{\UKnumberphone}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
@@ -221,6 +222,13 @@
     \vspace{4mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{0.7cm} @{\hskip 0.5cm}p{6cm}}
+     \ifthenelse{\equal{\UKnumberphone}{}}{}{
+          {$
+              \begin{array}{l}
+              \hspace{1.5mm} \Huge \textnormal{\faMobile}
+              \end{array}
+              $}
+            & \UKnumberphone\\}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
           {$
               \begin{array}{l}
