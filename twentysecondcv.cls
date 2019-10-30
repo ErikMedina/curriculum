@@ -143,7 +143,6 @@
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\UKnumberphone}[1]{\renewcommand{\UKnumberphone}{#1}}
-\newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
@@ -229,14 +228,7 @@
               \end{array}
               $}
             & \UKnumberphone\\}
-      \ifthenelse{\equal{\cvnumberphone}{}}{}{
-          {$
-              \begin{array}{l}
-              \hspace{1.5mm} \Huge \textnormal{\faMobile}
-              \end{array}
-              $} 
-            & \cvnumberphone\\}
-    
+       
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
