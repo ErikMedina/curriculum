@@ -371,7 +371,7 @@
 %  MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.1cm,nohead,nofoot]{geometry}
+\RequirePackage[left=7.8cm,top=0.1cm,right=1cm,bottom=0.1cm,nohead,nofoot]{geometry}
 
 
 \usepackage{smartdiagram}
@@ -379,17 +379,17 @@
     bubble center node font = \footnotesize,
     bubble node font = \footnotesize,
     % specifies the minimum size of the bubble center node
-    bubble center node size = 0.5cm,
+    bubble center node size = 1cm,
     %  specifies the minimum size of the bubbles
     bubble node size = 0.5cm,
     % specifies which is the distance among the bubble center node and the other bubbles
-    distance center/other bubbles = 0.3cm,
+    distance center/other bubbles = 0.7cm,
     % sets the distance from the text to the border of the bubble center node
     distance text center bubble = 1.0cm,
     % set center bubble color
     bubble center node color = green_android,
     % define the list of colors usable in the diagram
-    set color list = {lightgray, materialcyan, orange, yellow, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime},
+    set color list = {lightgray, materialcyan, orange, yellow, materialorange, materialteal, materialamber, materialindigo, materialgreen, materiallime, orange, materiallime},
     % sets the opacity at which the bubbles are shown
     bubble fill opacity = 0.6,
     % sets the opacity at which the bubble text is shown
