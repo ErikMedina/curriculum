@@ -140,6 +140,7 @@
 
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
+\newcommand{\cvEu}[1]{\renewcommand{\cvEu}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
@@ -223,6 +224,15 @@
     \vspace{4mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{0.7cm} @{\hskip 0.5cm}p{6cm}}
+    	% EU   
+ 		\ifthenelse{\equal{\cvEu}{}}{}{
+            {$
+              	\begin{array}{l}
+               		\hspace{-0.25mm}
+					\includegraphics[width=8mm]{img/icon_eu.jpg}
+				\end{array}
+            $} & \textnormal{EU Citizen} \\
+        } 
      	% Phone
     	\ifthenelse{\equal{\UKnumberphone}{}}{}{
           {$
