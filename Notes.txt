@@ -1,3 +1,5 @@
 - Add Stackoverflow account
+- Add comment about clickable links
+- Add where I'm based
 - Add AgileCards link
 - Update description of the roles

@@ -12,8 +12,9 @@
 \def\arrow#1{\pspicture[shift=2pt](#1,0)\psline{->}(#1,0)\endpspicture}
 
 \usepackage{pstricks}
-
+\usepackage{graphicx}
 \usepackage{fontawesome}
+
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -141,6 +142,7 @@
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
+\newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\UKnumberphone}[1]{\renewcommand{\UKnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
@@ -221,36 +223,47 @@
     \vspace{4mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{0.7cm} @{\hskip 0.5cm}p{6cm}}
-     \ifthenelse{\equal{\UKnumberphone}{}}{}{
+     	% Phone
+    	\ifthenelse{\equal{\UKnumberphone}{}}{}{
           {$
               \begin{array}{l}
               \hspace{1.5mm} \Huge \textnormal{\faMobile}
               \end{array}
               $}
             & \UKnumberphone\\}
-       
-      \ifthenelse{\equal{\cvmail}{}}{}{
+    	% Email 
+     	\ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
               \hspace{0mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail} \\}
-      
-       \ifthenelse{\equal{\cvlinkedin}{}}{}{
+        % Linkedin
+        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
               \hspace{0mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
-        \ifthenelse{\equal{\cvgithub}{}}{}{
+   		% Github
+   		\ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
               \hspace{0mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
-            }   
+            }  
+        % Stackoverflow   
+ 		\ifthenelse{\equal{\cvstackoverflow}{}}{}{
+            {$
+              	\begin{array}{l}
+               		\hspace{-2.0mm}
+					\includegraphics[width=12mm]{img/icon_stackoverflow.png}
+				\end{array}
+            $} & \href{https://stackoverflow.com/users/3710314/}{\cvstackoverflow} \\
+        }      
             
     \end{tabular}
 
