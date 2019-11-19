@@ -141,6 +141,7 @@
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvEu}[1]{\renewcommand{\cvEu}{#1}}
+\newcommand{\cvLocation}[1]{\renewcommand{\cvLocation}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedin}{#1}}
 \newcommand{\cvgithub}[1]{\renewcommand{\cvgithub}{#1}}
 \newcommand{\cvstackoverflow}[1]{\renewcommand{\cvstackoverflow}{#1}}
@@ -173,7 +174,7 @@
 \newcommand\languages[1]{ 
   \renewcommand{\languages}{
     \begin{tikzpicture}
-          \node [above right] at (0, \languagesRows) {$A2 \: \arrow{2.1} \: B2 \:\arrow{2.1} \: C2$};
+          \node [above right] at (0, \languagesRows) {$A2 \: \arrow{2.1} \: B2 \:\arrow{2.1} \: Native$};
       \foreach [count=\i] \x/\y in {#1}{
         \draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
         \draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
@@ -228,16 +229,25 @@
  		\ifthenelse{\equal{\cvEu}{}}{}{
             {$
               	\begin{array}{l}
-               		\hspace{-0.25mm}
+               		\hspace{0mm}
 					\includegraphics[width=8mm]{img/icon_eu.jpg}
 				\end{array}
             $} & \textnormal{EU Citizen} \\
+        } 
+        % EU   
+ 		\ifthenelse{\equal{\cvLocation}{}}{}{
+            {$
+              	\begin{array}{l}
+               		\hspace{-0.25mm}
+					\includegraphics[width=8mm]{img/icon_location_mark.png}
+				\end{array}
+            $} & \textnormal{Bermondsey (London)} \\
         } 
      	% Phone
     	\ifthenelse{\equal{\UKnumberphone}{}}{}{
           {$
               \begin{array}{l}
-              \hspace{1.5mm} \Huge \textnormal{\faMobile}
+              \hspace{1.8mm} \Huge \textnormal{\faMobile}
               \end{array}
               $}
             & \UKnumberphone\\}
@@ -253,7 +263,7 @@
         \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{0mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+              \hspace{0.5mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
@@ -261,7 +271,7 @@
    		\ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{0mm} \huge \textnormal{\faGithub}
+              \hspace{0.5mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }  
@@ -272,7 +282,7 @@
                		\hspace{-2.0mm}
 					\includegraphics[width=12mm]{img/icon_stackoverflow.png}
 				\end{array}
-            $} & \href{https://stackoverflow.com/users/3710314/}{\cvstackoverflow} \\
+            $} & \href{https://stackoverflow.com/users/3710314/\cvstackoverflow}{\cvstackoverflow} \\
         }      
             
     \end{tabular}
