@@ -1,5 +1,6 @@
-- Add Stackoverflow account
-- Add comment about clickable links
-- Add where I'm based
-- Add AgileCards link
+- Add Stackoverflow account (DONE)
+- Add EU citizen indication (DONE)
+- Add where I'm based (DONE)
+- Add HackerRan account
 - Update description of the roles
+- Add AgileCards link
